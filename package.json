@@ -1,8 +1,8 @@
 {
-  "name": "next-firebase-starter",
+  "name": "the-dragon-hoard",
   "private": true,
   "version": "1.0.0",
-  "author": "Trinity Christiana",
+  "author": "Tots",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

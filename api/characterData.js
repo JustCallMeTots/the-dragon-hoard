@@ -4,7 +4,7 @@ import { clientCredentials } from '../utils/client';
 
 const dbUrl = clientCredentials.databaseURL;
 
-const getCharactersBYUid = (uid) => new Promise((resolve, reject) => {
+const getCharactersByUid = (uid) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/character.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => {
       if (response.data) {
@@ -37,8 +37,15 @@ const createCharacter = (charObj) => new Promise((resolve, reject) => {
     }).catch(reject);
 });
 
+const updateCharacter = (charObj) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/character/${charObj.firebaseKey}.json`, charObj)
+    .then(resolve)
+    .catch(reject);
+});
+
 export {
   getCharacters,
-  getCharactersBYUid,
+  getCharactersByUid,
   createCharacter,
+  updateCharacter,
 };

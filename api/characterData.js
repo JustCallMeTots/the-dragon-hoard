@@ -4,15 +4,9 @@ import { clientCredentials } from '../utils/client';
 
 const dbUrl = clientCredentials.databaseURL;
 
-const getCharactersByUid = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/character.json?orderBy="uid"&equalTo="${uid}"`)
-    .then((response) => {
-      if (response.data) {
-        resolve(Object.values(response.data));
-      } else {
-        resolve([]);
-      }
-    })
+const getSingleCharacter = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/character/${firebaseKey}.json`)
+    .then((response) => resolve(response.data))
     .catch((error) => reject(error));
 });
 
@@ -43,9 +37,16 @@ const updateCharacter = (charObj) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const deleteCharacter = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/character/${firebaseKey}.json`)
+    .then(() => resolve('deleted'))
+    .catch((error) => reject(error));
+});
+
 export {
   getCharacters,
-  getCharactersByUid,
+  getSingleCharacter,
   createCharacter,
   updateCharacter,
+  deleteCharacter,
 };

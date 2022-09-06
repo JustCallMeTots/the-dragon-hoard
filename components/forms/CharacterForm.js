@@ -13,7 +13,7 @@ const initialState = {
   charName: '',
   characterImg: '',
   race: '',
-  class: '',
+  nameOfCLass: '',
   level: '',
   ability: '',
   descriptions: '',
@@ -48,11 +48,11 @@ function CharacterForm({ obj }) {
     e.preventDefault();
     if (obj.firebaseKey) {
       updateCharacter(formInput)
-        .then(() => router.push(`/character/${obj.firebaseKey}`));
+        .then(() => router.push('/characters'));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createCharacter(payload).then(() => {
-        router.push('/');
+        router.push('/characters');
       });
     }
   };
@@ -70,6 +70,10 @@ function CharacterForm({ obj }) {
 
       <FloatingLabel controlId="floatingInput3" label="Level" className="mb-3">
         <Form.Control type="text" placeholder="Enter Level" name="level" value={formInput.level} onChange={handleChange} required />
+      </FloatingLabel>
+
+      <FloatingLabel controlId="floatingInput3" label="Ability Scores" className="mb-3">
+        <Form.Control type="text" placeholder="Ability Scores" name="ability" value={formInput.ability} onChange={handleChange} required />
       </FloatingLabel>
 
       <FloatingLabel controlId="floatingSelect" label="Race">
@@ -152,6 +156,7 @@ CharacterForm.propTypes = {
     charName: PropTypes.string,
     characterImg: PropTypes.string,
     level: PropTypes.string,
+    ability: PropTypes.string,
     class: PropTypes.string,
     nameOfCLass: PropTypes.string,
     race: PropTypes.string,

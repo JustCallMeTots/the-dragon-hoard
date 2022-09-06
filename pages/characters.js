@@ -17,7 +17,6 @@ export default function Characters() {
 
   return (
     <div className="d-flex flex-wrap">
-      {/* TODO: map over books here using BookCard component */}
       {characters?.map((chars) => (
         <CharacterCard key={chars.firebaseKey} charObj={chars} onUpdate={getAllCharacters} />
       ))}

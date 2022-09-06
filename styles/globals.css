@@ -18,5 +18,27 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: #F9E0D9;
+}
+.characterCard {
+  background-color: #6E0D25;
+  color: #F9E0D9;
+  border-radius: 9%;
+}
+.charImg {
+  border-radius: 9%;
+}
+.editChar {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  margin: auto;
+}
+.deleteChar {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  margin: auto;
+  background-color: #1E2019;
+  color: #F9E0D9;
 }

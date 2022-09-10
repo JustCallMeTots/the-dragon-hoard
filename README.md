@@ -22,4 +22,3 @@ ___
 #### Created by (https://github.com/JustCallMeTots)
 
 ## Loom Video Link
-(https://www.loom.com/share/70fce9f5e66e4d80bbd1014320a02d4a)

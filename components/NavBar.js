@@ -36,7 +36,7 @@ export default function NavBar() {
                 <a className="nav-link" href="#">New Character</a>
               </Link>
             </li>
-            <button type="button" className="btn btn-danger" onClick={signOut}>
+            <button type="button" className="btn btn-dark" style={{ display: 'flex', alignItems: 'flex-end' }} onClick={signOut}>
               Sign Out
             </button>
           </ul>

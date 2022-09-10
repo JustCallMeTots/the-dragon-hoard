@@ -23,10 +23,10 @@ function CharacterCard({ charObj, onUpdate }) {
       </Card.Body>
       { charObj.uid === user.uid
         ? (
-          <>
+          <div className="btnGroup">
             <Link href={`/edit/${charObj.firebaseKey}`} passHref>
               <Button
-                variant="info"
+                variant=""
                 className="editChar"
               > Edit Character
               </Button>
@@ -38,11 +38,11 @@ function CharacterCard({ charObj, onUpdate }) {
             >
               DELETE
             </Button>
-          </>
+          </div>
         )
         : ''}
       <Link href={`/${charObj.firebaseKey}`} passHref>
-        <Button variant="primary" className="m-2">VIEW</Button>
+        <Button className="viewBtn">VIEW</Button>
       </Link>
     </Card>
   );

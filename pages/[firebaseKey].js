@@ -14,10 +14,15 @@ export default function ViewCharacter() {
 
   return (
     <div className="detailCard">
-      <div className="d-flex flex-column">
+      <div className="">
         <img className="charImg" variant="top" src={charDetails.characterImg} alt={charDetails.charName} style={{ height: '400px' }} />
       </div>
-      <div className="text-white ms-5 details">
+      <div
+        className=""
+        style={{
+          margin: '20px', width: '200px', justifyContent: 'space-between', color: 'wheat',
+        }}
+      >
         <h2>
           {charDetails.charName}
           {charDetails.alive ? '' : '💀'}

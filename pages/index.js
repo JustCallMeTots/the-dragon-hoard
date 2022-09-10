@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import { signOut } from '../utils/auth';
 import { useAuth } from '../utils/context/authContext';
 
 function Home() {
@@ -13,13 +12,10 @@ function Home() {
         padding: '30px',
         maxWidth: '400px',
         margin: '0 auto',
+        color: 'wheat',
       }}
     >
       <h1>Welcome {user.displayName}, to The Dragon's Hoard </h1>
-      <p>Click the button below to logout!</p>
-      <button className="btn btn-danger btn-lg copy-btn" type="button" onClick={signOut}>
-        Sign Out
-      </button>
     </div>
   );
 }

@@ -12,8 +12,6 @@ import getClasses from '../../api/classData';
 const initialState = {
   charName: '',
   characterImg: '',
-  race: '',
-  nameOfCLass: '',
   level: '',
   ability: '',
   descriptions: '',
@@ -101,7 +99,7 @@ function CharacterForm({ obj }) {
 
       <FloatingLabel controlId="floatingSelect" label="Class">
         <Form.Select
-          aria-label="nameOfClass"
+          aria-label="Class"
           name="nameOfCLass"
           onChange={handleChange}
           className="mb-3"

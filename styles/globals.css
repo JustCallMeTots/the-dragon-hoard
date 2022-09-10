@@ -18,15 +18,20 @@ a {
 }
 
 body {
-  background-color: #F9E0D9;
+  background-color: #1E2019;
 }
 .characterCard {
-  background-color: #6E0D25;
-  color: #F9E0D9;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/84/Parchment.00.jpg);
+  background-color:  #F9E0D9;
+  color: black;
   border-radius: 9%;
 }
 .charImg {
   border-radius: 9%;
+}
+.btnGroup {
+  display: flex;
+  justify-content: space-between;
 }
 .editChar {
   display: flex;
@@ -39,6 +44,24 @@ body {
   justify-content: space-between;
   width: auto;
   margin: auto;
-  background-color: #1E2019;
+  background-color: #6E0D25;
   color: #F9E0D9;
+}
+.viewBtn {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  margin: auto;
+  background-color: #7D84B2;
+  color: #F9E0D9;
+}
+.detailCard {
+  margin: 69px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+charInfo {
+  display: inline;
 }

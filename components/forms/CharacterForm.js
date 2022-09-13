@@ -86,9 +86,9 @@ function CharacterForm({ obj }) {
           {
             races.map((race) => (
               <option
-                key={races.firebaseKey}
-                value={races.firebaseKey}
-                selected={obj.race === race.firebaseKey}
+                key={race.firebaseKey}
+                value={race.firebaseKey}
+                selected={obj.race === race.raceName}
               >
                 {race.raceName}
               </option>
@@ -107,13 +107,13 @@ function CharacterForm({ obj }) {
         >
           <option value="">Select a Class</option>
           {
-            classes.map((classNames) => (
+            classes.map((className) => (
               <option
-                key={classes.firebaseKey}
-                value={classes.firebaseKey}
-                selected={obj.nameOfCLass === classNames.firebaseKey}
+                key={className.firebaseKey}
+                value={className.firebaseKey}
+                selected={obj.nameOfCLass === className.nameOfCLass}
               >
-                {classNames.nameOfCLass}
+                {className.nameOfCLass}
               </option>
             ))
           }
@@ -155,7 +155,6 @@ CharacterForm.propTypes = {
     characterImg: PropTypes.string,
     level: PropTypes.string,
     ability: PropTypes.string,
-    class: PropTypes.string,
     nameOfCLass: PropTypes.string,
     race: PropTypes.string,
     descriptions: PropTypes.string,

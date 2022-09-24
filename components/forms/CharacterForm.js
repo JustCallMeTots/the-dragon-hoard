@@ -86,8 +86,8 @@ function CharacterForm({ obj }) {
           {
             races.map((race) => (
               <option
-                key={race.firebaseKey}
-                value={race.firebaseKey}
+                key={race.raceName}
+                value={race.raceName}
                 selected={obj.race === race.raceName}
               >
                 {race.raceName}
@@ -109,8 +109,8 @@ function CharacterForm({ obj }) {
           {
             classes.map((className) => (
               <option
-                key={className.firebaseKey}
-                value={className.firebaseKey}
+                key={className.nameOfCLass}
+                value={className.nameOfCLass}
                 selected={obj.nameOfCLass === className.nameOfCLass}
               >
                 {className.nameOfCLass}

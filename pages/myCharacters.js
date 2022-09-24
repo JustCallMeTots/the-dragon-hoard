@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { getCharactersByUid } from '../api/characterData';
 import CharacterCard from '../components/CharacterCard';
